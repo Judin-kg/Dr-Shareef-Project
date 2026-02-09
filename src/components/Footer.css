@@ -17,12 +17,14 @@
 
 /* Brand */
 .footer-brand h3 {
+  font-family: "Poppins", sans-serif;
   color: #470b0b;
   font-size: 1.6rem;
   margin-bottom: 10px;
 }
 
 .footer-brand p {
+  font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
   color: #999;
   max-width: 380px;

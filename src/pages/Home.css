@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
-/* ===============================
-   BASE
-================================ */
+/* ================= BASE ================= */
 
 .home-container {
   min-height: 100vh;
@@ -26,9 +24,7 @@
   min-height: 100vh;
 }
 
-/* ===============================
-   IMAGE SECTION
-================================ */
+/* ================= IMAGE ================= */
 
 .home-image {
   flex: 1;
@@ -50,14 +46,12 @@
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(0,0,0,0.25),
-    rgba(0,0,0,0.85)
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.85)
   );
 }
 
-/* ===============================
-   FUTURISTIC GLOW
-================================ */
+/* ================= GLOW ================= */
 
 .futuristic-glow::before {
   content: "";
@@ -65,7 +59,7 @@
   inset: -40px;
   background: radial-gradient(
     circle,
-    rgba(212,175,55,0.35),
+    rgba(212, 175, 55, 0.35),
     transparent 65%
   );
   filter: blur(70px);
@@ -79,9 +73,7 @@
   100% { opacity: 0.3; }
 }
 
-/* ===============================
-   CONTENT
-================================ */
+/* ================= CONTENT ================= */
 
 .home-content {
   flex: 1;
@@ -97,14 +89,14 @@
   font-size: 3.8rem;
   font-weight: 700;
   letter-spacing: 2px;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 
 .home-title {
   color: #7a1c1c;
 }
 
-/* Typing Name */
+/* Typing name */
 .typing-name {
   display: inline-block;
   overflow: hidden;
@@ -113,7 +105,7 @@
   animation: typing 4.5s steps(18, end) forwards;
 }
 
-/* Typing Roles */
+/* Typing roles */
 .typing-roles {
   font-size: 1.35rem;
   color: rgb(104, 21, 21);
@@ -132,10 +124,6 @@
 .typing-roles span:nth-child(2) { animation-delay: 4s; }
 .typing-roles span:nth-child(3) { animation-delay: 8s; }
 
-/* ===============================
-   TEXT ANIMATIONS
-================================ */
-
 @keyframes typing {
   from { width: 0; }
   to { width: 18ch; }
@@ -149,87 +137,66 @@
   100% { opacity: 0; }
 }
 
-/* ===============================
-   VIDEO SECTION
-================================ */
+/* ================= VIDEO ================= */
 
 .video-section {
-  min-height: 100vh;
   background: #000;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px 20px;
+  padding: 50px 20px;
 }
 
 .video-wrapper {
   position: relative;
   width: 72%;
   max-width: 1100px;
-  transform: scale(0.85);
+  transform: scale(0.9);
   opacity: 0;
-  transition: transform 0.45s ease-out, opacity 0.45s ease-out;
+  transition: transform 0.4s ease, opacity 0.4s ease;
   border-radius: 22px;
   overflow: hidden;
   font-family: "Poppins", sans-serif;
 }
 
-/* Glass effect */
 .futuristic-glass {
-  background: rgba(255,255,255,0.06);
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(18px);
-  box-shadow: 0 30px 80px rgba(0,0,0,0.9);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9);
 }
 
 .video-wrapper video {
   width: 100%;
+  height: auto;
   display: block;
 }
 
-/* ===============================
-   VIDEO QUOTE
-================================ */
+/* ================= QUOTE ================= */
 
 .video-quote {
   position: absolute;
-  bottom: 24px;
-  left: 24px;
+  bottom: 20px;
+  left: 20px;
   max-width: 420px;
-  padding: 16px 18px;
-  background: rgba(0,0,0,0.45);
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(12px);
   border-left: 3px solid #460b0b;
   border-radius: 12px;
   color: #878686;
-  animation: quoteFade 1.4s ease forwards;
 }
 
 .video-quote p {
   font-size: 0.95rem;
   line-height: 1.6;
-  margin-bottom: 6px;
 }
 
 .video-quote span {
   font-size: 0.8rem;
   color: #520808;
-  font-weight: 500;
 }
 
-@keyframes quoteFade {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ===============================
-   TABLET
-================================ */
+/* ================= TABLET ================= */
 
 @media (max-width: 1024px) {
   .home-wrapper {
@@ -242,12 +209,8 @@
 
   .home-content {
     padding: 40px;
-    align-items: center;
     text-align: center;
-  }
-
-  .main-title {
-    font-size: 3rem;
+    align-items: center;
   }
 
   .video-wrapper {
@@ -255,62 +218,74 @@
   }
 }
 
-/* ===============================
-   MOBILE
-================================ */
+/* ================= MOBILE ================= */
 
 @media (max-width: 600px) {
   .home-wrapper {
     flex-direction: column;
+    min-height: auto;
   }
 
   .home-image {
-    height: 85vh;
+    height: 70vh;
   }
 
   .home-image img {
-    width: 180%;
-    transform: translateX(-12%);
+    width: 165%;
+    transform: translateX(-10%);
   }
 
   .home-content {
-    padding: 25px 18px 30px;
-    align-items: center;
+    padding: 16px 14px 20px;
     text-align: center;
+    align-items: center;
   }
 
   .main-title {
-    font-size: 2.3rem;
-    margin-bottom: 16px;
-  }
-
-  .typing-name {
-    animation: typing 4.8s steps(18, end) forwards;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
   }
 
   .typing-roles {
-    font-size: 1.05rem;
-    height: 28px;
+    font-size: 1.1rem;
+    height: 30px;
+    display: block;
+  }
+
+  .typing-roles span {
+    width: 100%;
+    text-align: center;
+  }
+
+  .video-section {
+    padding: 20px 10px;
   }
 
   .video-wrapper {
-    width: 96%;
+    width: 100%;
+    max-width: 100%;
+    transform: scale(1);
+    opacity: 1;
     border-radius: 14px;
   }
 
+  .video-wrapper video {
+    max-height: 75vh;
+    object-fit: cover;
+  }
+
   .video-quote {
-    left: 14px;
-    right: 14px;
-    bottom: 14px;
-    max-width: none;
-    padding: 14px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 12px;
   }
 
   .video-quote p {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
   }
 
   .video-quote span {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
   }
 }
