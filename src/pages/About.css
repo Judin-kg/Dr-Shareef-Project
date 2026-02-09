@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+/* ===============================
+   BASE SECTION
+================================ */
+
+.about-section {
+  min-height: 100vh;
+  background: #0c0c0c;
+  color: #171616;
+  padding: 120px 80px;
+  overflow: hidden;
+}
+
+.about-wrapper {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 90px;
+}
+
+/* ===============================
+   TEXT
+================================ */
+
+.about-text {
+  flex: 1;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Typing title */
+.about-title {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #60605f;
+  white-space: nowrap;
+  overflow: hidden;
+  /* border-right: 3px solid #d4af37; */
+  width: 0;
+}
+
+.typing-effect {
+  animation: typing 2.8s steps(28) forwards,
+             blink 0.8s infinite;
+}
+
+@keyframes typing {
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Paragraphs */
+.about-para {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #cccccc;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s forwards;
+  
+  
+}
+
+/* Content blocks */
+.about-block {
+  margin-bottom: 35px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s forwards;
+}
+
+.about-block h3 {
+  color: #807f7f;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.about-block p {
+  color: #bbbbbb;
+  line-height: 1.8;
+}
+
+/* Delays */
+.delay { animation-delay: 0.4s; }
+.delay-2 { animation-delay: 0.7s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   IMAGE – FUTURISTIC SCROLL FX
+================================ */
+
+.about-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  perspective: 1000px;
+}
+
+.about-image {
+  width: 420px;
+  border-radius: 22px;
+  opacity: 0;
+  transform: scale(1.25) translateY(40px);
+  transition:
+    opacity 1s ease,
+    transform 0.25s ease-out;
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.85),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  will-change: transform;
+}
+
+/* Reveal */
+.img-reveal {
+  opacity: 1;
+}
+
+/* Hover depth */
+.about-image:hover {
+  transform: scale(0.96) rotateX(2deg);
+}
+
+/* Glow aura */
+.about-image-container::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 0.18),
+    transparent 70%
+  );
+  filter: blur(90px);
+  z-index: -1;
+}
+
+
+
+.title-title{
+color:rgb(78, 12, 12)
+}
+/* ===============================
+   TABLET
+================================ */
+
+@media (max-width: 1024px) {
+  .about-wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about-title {
+    font-size: 2.6rem;
+  }
+
+  .about-image {
+    width: 340px;
+    margin-top: 40px;
+  }
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: 90px 20px;
+  }
+
+  .about-title {
+    font-size: 2.2rem;
+  }
+
+  .about-para,
+  .about-block p {
+    font-size: 0.95rem;
+  }
+
+  .about-image {
+    width: 300px;
+  }
+}

@@ -1,0 +1,147 @@
+/* ===============================
+   BASE
+================================ */
+/* ===============================
+   GALLERY HEADING
+================================ */
+
+.gallery-heading {
+  /* text-align: center; */
+  /* margin-left: 10px; */
+  margin-left: 30px;
+  padding: 30px 20px 30px;
+  background: #000;
+}
+
+.gallery-title {
+  font-size: 3rem;
+  color: #575755;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  /* text-transform: uppercase; */
+}
+
+.gallery-subtitle {
+  font-size: 1rem;
+  color: #bdbdbd;
+  max-width: 520px;
+  margin-left: 5px;
+  line-height: 1.2;
+}
+ 
+.title-sub{
+    color: rgb(67, 16, 16);
+}
+/* ===============================
+   RESPONSIVE HEADING
+================================ */
+
+@media (max-width: 768px) {
+  .gallery-title {
+    font-size: 2.3rem;
+  }
+
+  .gallery-subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-heading {
+    padding: 70px 16px 40px;
+  }
+
+  .gallery-title {
+    font-size: 2rem;
+  }
+}
+
+.gallery-section {
+  width: 100%;
+  background: #000;
+  margin: 0;
+  padding: 0;
+}
+
+/* GRID LAYOUT */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* DESKTOP */
+  gap: 0;
+}
+
+/* ITEM */
+.gallery-item {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* IMAGE */
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  border-radius: 20px;
+  transform: scale(0.10);
+  opacity: 0;
+  transition: transform 0.45s ease, opacity 0.45s ease;
+  filter: grayscale(20%) contrast(1.15) brightness(0.85);
+}
+
+/* FUTURISTIC OVERLAY */
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background: radial-gradient(
+    circle at center,
+    rgba(248, 245, 245, 0.18),
+    rgba(0, 0, 0, 0.9)
+  ); */
+  pointer-events: none;
+}
+
+/* ===============================
+   DESKTOP HOVER
+================================ */
+
+@media (hover: hover) {
+  .gallery-image:hover {
+    transform: scale(1.07);
+    filter: grayscale(0%) contrast(1.1);
+  }
+}
+
+/* ===============================
+   TABLET (≤1024px)
+   2 IMAGES PER ROW
+================================ */
+
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-image {
+    min-height: 300px;
+  }
+}
+
+/* ===============================
+   MOBILE (≤600px)
+   1 IMAGE PER ROW
+================================ */
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-image {
+    min-height: 260px;
+    transform: scale(0.95);
+    filter: grayscale(0%) contrast(1.05);
+  }
+}

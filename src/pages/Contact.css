@@ -1,0 +1,159 @@
+/* ===============================
+   BASE SECTION
+================================ */
+
+.contact-section {
+  min-height: 100vh;
+  background-image: url("https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/DrShareef/drShareef_mwbm2x.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+ 
+}
+
+/* Dark futuristic overlay */
+.contact-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(212, 175, 55, 0.08),
+    rgba(0, 0, 0, 0.85)
+  );
+  z-index: 1;
+}
+
+/* ===============================
+   GLASS CONTAINER
+================================ */
+
+.contact-container {
+    margin: 50px;
+  position: relative;
+  z-index: 2;
+  width: 420px;
+  padding: 55px 45px;
+  border-radius: 24px;
+  text-align: center;
+
+  /* Glassmorphism */
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.75);
+
+  transform: scale(0.9) translateY(20px);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* ===============================
+   TEXT
+================================ */
+
+.contact-title {
+  font-size: 2.6rem;
+  color: rgb(41, 40, 40);
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+}
+
+.contact-subtitle {
+  font-size: 0.95rem;
+  color: #d0d0d0;
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+/* ===============================
+   FORM
+================================ */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #9a9a9a;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.6);
+}
+
+/* ===============================
+   BUTTON
+================================ */
+
+.contact-form button {
+  margin-top: 10px;
+  background: linear-gradient(135deg, #4d0808, #0b0101);
+  color: #000;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 18px 35px rgba(212, 175, 55, 0.45);
+}
+
+/* ===============================
+   TABLET
+================================ */
+
+@media (max-width: 1024px) {
+  .contact-container {
+    width: 85%;
+    padding: 50px 40px;
+  }
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  .contact-container {
+    width: 92%;
+    padding: 40px 26px;
+    border-radius: 20px;
+  }
+
+  .contact-title {
+    font-size: 2.1rem;
+  }
+
+  .contact-subtitle {
+    font-size: 0.9rem;
+  }
+}

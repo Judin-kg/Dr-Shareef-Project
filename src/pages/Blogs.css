@@ -1,0 +1,108 @@
+.blog-section {
+  min-height: 100vh;
+  background: #0c0c0c;
+  padding: 120px 80px;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Title */
+.blog-title {
+  /* text-align: center; */
+  font-size: 3rem;
+  color: #535352;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+}
+
+.blog-sub{
+    color: rgb(72, 21, 21);
+}
+
+/* Carousel container */
+.carousel-wrapper {
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Moving track */
+.carousel-track {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  animation: scrollUp 20s linear infinite;
+}
+
+/* Pause on hover */
+.carousel-wrapper:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+/* Blog card */
+.blog-card {
+  display: flex;
+  background: #111;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+  transition: transform 0.4s ease;
+}
+
+.blog-card:hover {
+  transform: scale(0.97);
+}
+
+/* Image */
+.blog-card img {
+  width: 220px;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Content */
+.blog-content {
+  padding: 20px;
+}
+
+.blog-content h3 {
+  color: #9c9a9a;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.blog-content p {
+  color: #bbbbbb;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* Vertical scrolling animation */
+@keyframes scrollUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blog-section {
+    padding: 80px 30px;
+  }
+
+  .blog-card {
+    flex-direction: column;
+  }
+
+  .blog-card img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .blog-title {
+    font-size: 2.2rem;
+  }
+}

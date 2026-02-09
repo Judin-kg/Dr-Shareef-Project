@@ -1,0 +1,77 @@
+.manage-about {
+  padding: 40px;
+  color: #fff;
+}
+
+.manage-about h1 {
+  color: #d4af37;
+  margin-bottom: 8px;
+}
+
+.manage-about p {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+/* Form */
+.about-form {
+  max-width: 600px;
+  background: #111;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.about-form label {
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.about-form input,
+.about-form textarea {
+  width: 100%;
+  padding: 12px;
+  background: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.about-form input:focus,
+.about-form textarea:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+/* Image preview */
+.image-preview {
+  margin-top: 15px;
+}
+
+.image-preview img {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #333;
+}
+
+/* Button */
+.about-form button {
+  margin-top: 25px;
+  padding: 12px 20px;
+  background: #d4af37;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.4);
+}
