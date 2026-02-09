@@ -123,7 +123,7 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className={`nav-container ${scrolled ? "shrink" : ""}`}>
         <div className="logo" onClick={() => scrollToSection("home")}>
-          Dr. A M Shareef
+        <span className="sub-title">DR.</span>   A M SHAREEF
         </div>
 
         <ul className={`nav-links ${open ? "open" : ""}`}>

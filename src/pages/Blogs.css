@@ -8,6 +8,7 @@
 
 /* Title */
 .blog-title {
+    font-family: "Poppins", sans-serif;
   /* text-align: center; */
   font-size: 3rem;
   color: #535352;
@@ -69,12 +70,14 @@
   color: #9c9a9a;
   margin-bottom: 10px;
   font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
 }
 
 .blog-content p {
   color: #bbbbbb;
   line-height: 1.7;
   font-size: 0.95rem;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Vertical scrolling animation */

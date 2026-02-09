@@ -27,11 +27,15 @@
 .about-text {
   flex: 1;
   font-family: "Poppins", sans-serif;
+  
 }
+
+
 
 /* Typing title */
 .about-title {
   font-size: 3rem;
+  font-family: "Poppins", sans-serif;
   margin-bottom: 30px;
   color: #60605f;
   white-space: nowrap;
@@ -62,7 +66,7 @@
   opacity: 0;
   transform: translateY(30px);
   animation: fadeUp 1s forwards;
-  
+  font-family: "Poppins", sans-serif;
   
 }
 
