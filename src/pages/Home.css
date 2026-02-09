@@ -255,7 +255,32 @@
   .typing-roles span {
     width: 100%;
     text-align: center;
+    }
+
+/* .typing-roles {
+    position: relative;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
+
+  .typing-roles span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    animation: roleFadeMobile 12s infinite;
+  } */
+
+  .typing-roles span:nth-child(1) { animation-delay: 0s; }
+  .typing-roles span:nth-child(2) { animation-delay: 4s; }
+  .typing-roles span:nth-child(3) { animation-delay: 8s; }
+
+
+
 
   .video-section {
     padding: 20px 10px;
@@ -274,18 +299,38 @@
     object-fit: cover;
   }
 
-  .video-quote {
+  /* .video-quote {
     left: 10px;
     right: 10px;
     bottom: 10px;
     padding: 12px;
+  } */
+
+  .video-quote {
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    padding: 8px 10px;   /* reduced padding */
+    max-width: 90%;
+    border-left-width: 2px;
   }
 
   .video-quote p {
-    font-size: 0.82rem;
+    font-size: 0.75rem;  /* smaller text */
+    line-height: 1.45;
+    margin-bottom: 4px;
   }
 
   .video-quote span {
-    font-size: 0.72rem;
+    font-size: 0.65rem;
   }
+
+
+  /* .video-quote p {
+    font-size: 0.82rem;
+  } */
+
+  /* .video-quote span {
+    font-size: 0.72rem;
+  } */
 }
