@@ -108,7 +108,7 @@ Message:
 ${message}
     `;
 
-    const mailtoLink = `mailto:info@vishnuppullanatt.com?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:info@doctorshareef@hotmail?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(mailBody)}`;
 
@@ -128,7 +128,7 @@ ${message}
 
         {/* Direct email display */}
         <p className="contact-email">
-          📧 info@drshareef@gmail.com
+          📧 info@ doctorshareef@hotmail.com
         </p>
 
         <form className="contact-form" onSubmit={handleSubmit}>
