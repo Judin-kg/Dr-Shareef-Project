@@ -395,7 +395,7 @@ export default function About() {
         {/* TEXT */}
         <div className="about-text">
           <h2 className="about-title typing-effect">
-            About <span className="title-title">{about?.title || "Dr. A M Shareef"}</span>
+            About<br></br> <span className="title-title">{about?.title || "Dr. A M Shareef"}</span>
           </h2>
 
           <p className="about-para fade-in">
