@@ -134,7 +134,7 @@
 import React, { useEffect, useRef } from "react";
 import "../pages/Home.css";
 import video from "../assets/drshareef.mp4";
-import image from "../assets/Comp 1.mp4"
+
 export default function Home() {
   const videoRef = useRef(null);
 
