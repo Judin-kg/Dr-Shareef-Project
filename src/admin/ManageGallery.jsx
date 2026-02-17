@@ -13,7 +13,7 @@ export default function ManageGallery() {
 
   // ✅ Fetch gallery images
   useEffect(() => {
-    fetch("http://localhost:5000/api/gallery")
+    fetch("https://dr-shareef-server.vercel.app/api/gallery")
       .then((res) => res.json())
       .then((data) => setImages(data))
       .catch((err) => console.log(err));
@@ -55,7 +55,7 @@ export default function ManageGallery() {
       const result = await res.json();
 
       // ✅ Save to backend
-      const galleryRes = await fetch("http://localhost:5000/api/gallery", {
+      const galleryRes = await fetch("https://dr-shareef-server.vercel.app/api/gallery", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -81,7 +81,7 @@ export default function ManageGallery() {
   };
 
   const handleDelete = async (id) => {
-    await fetch(`http://localhost:5000/api/gallery/${id}`, {
+    await fetch(`https://dr-shareef-server.vercel.app/api/gallery/${id}`, {
       method: "DELETE",
     });
 

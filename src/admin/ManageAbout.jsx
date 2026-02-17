@@ -82,7 +82,7 @@ export default function ManageAbout() {
 
   // ✅ Fetch existing About data
   useEffect(() => {
-    fetch("http://localhost:5000/api/about")
+    fetch("https://dr-shareef-server.vercel.app/api/about")
       .then((res) => res.json())
       .then((data) => {
         if (data) {
@@ -132,7 +132,7 @@ export default function ManageAbout() {
       }
 
       // Save to backend
-      await fetch("http://localhost:5000/api/about", {
+      await fetch("https://dr-shareef-server.vercel.app/api/about", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

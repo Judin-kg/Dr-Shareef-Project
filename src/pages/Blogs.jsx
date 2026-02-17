@@ -106,7 +106,7 @@ export default function Blogs() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/blogs");
+        const res = await fetch("https://dr-shareef-server.vercel.app/api/blogs");
         const data = await res.json();
 
         const formatted = data

@@ -15,7 +15,7 @@ export default function ManageBlogs() {
 
   // ✅ Fetch blogs
   useEffect(() => {
-    fetch("http://localhost:5000/api/blogs")
+    fetch("https://dr-shareef-server.vercel.app/api/blogs")
       .then((res) => res.json())
       .then((data) => setBlogs(data))
       .catch((err) => console.log(err));
@@ -57,7 +57,7 @@ export default function ManageBlogs() {
       const result = await res.json();
 
       // ✅ Save blog in backend
-      const blogRes = await fetch("http://localhost:5000/api/blogs", {
+      const blogRes = await fetch("https://dr-shareef-server.vercel.app/api/blogs", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -87,7 +87,7 @@ export default function ManageBlogs() {
   };
 
   const deleteBlog = async (id) => {
-    await fetch(`http://localhost:5000/api/blogs/${id}`, {
+    await fetch(`https://dr-shareef-server.vercel.app/api/blogs/${id}`, {
       method: "DELETE",
     });
 

@@ -177,9 +177,9 @@ export default function Dashboard() {
       try {
 
         const [aboutRes, blogRes, galleryRes] = await Promise.all([
-          fetch("http://localhost:5000/api/about"),
-          fetch("http://localhost:5000/api/blogs"),
-          fetch("http://localhost:5000/api/gallery"),
+          fetch("https://dr-shareef-server.vercel.app/api/about"),
+          fetch("https://dr-shareef-server.vercel.app/api/blogs"),
+          fetch("https://dr-shareef-server.vercel.app/api/gallery"),
         ]);
 
         const aboutData = await aboutRes.json();

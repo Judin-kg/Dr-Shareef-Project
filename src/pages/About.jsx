@@ -335,7 +335,7 @@ export default function About() {
   useEffect(() => {
     const fetchAbout = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/about");
+        const res = await fetch("https://dr-shareef-server.vercel.app/api/about");
         const data = await res.json();
 
         setAbout(data);
