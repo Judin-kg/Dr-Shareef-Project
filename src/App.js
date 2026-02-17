@@ -105,6 +105,7 @@ import AdminLogin from "./admin/AdminLogin";
 import Dashboard from "./admin/Dashboard";
 import Navabar from "./components/Navabar";
 import Mentorship from "./pages/Mentorship";
+import { FaUserShield } from "react-icons/fa";
 
 function App() {
   const [isAdmin, setIsAdmin] = useState(false);
@@ -153,7 +154,7 @@ function App() {
       <Footer />
 
       {/* Temporary admin access button (remove in production) */}
-      <button
+      {/* <button
         onClick={() => setIsAdmin(true)}
         style={{
           position: "fixed",
@@ -170,7 +171,26 @@ function App() {
         }}
       >
         Admin
-      </button>
+      </button> */}
+      <div
+  onClick={() => setIsAdmin(true)}
+  // className="admin-float-btn"
+  style={{
+          position: "fixed",
+          bottom: "20px",
+          right: "20px",
+          background: "#d4af37",
+          color: "#000",
+          border: "none",
+          padding: "10px 16px",
+          borderRadius: "6px",
+          fontWeight: "600",
+          cursor: "pointer",
+          zIndex: 999,
+        }}
+>
+  <FaUserShield size={22} />
+</div>
     </>
   );
 }

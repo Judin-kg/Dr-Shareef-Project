@@ -29,6 +29,7 @@ export default function AdminLogin({ onLogin }) {
         <form onSubmit={handleSubmit}>
           <input
             type="email"
+            className="w-100"
             placeholder="Admin Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -36,6 +37,7 @@ export default function AdminLogin({ onLogin }) {
           />
 
           <input
+          className="w-100"
             type="password"
             placeholder="Password"
             value={password}
@@ -43,7 +45,7 @@ export default function AdminLogin({ onLogin }) {
             required
           />
 
-          <button type="submit">Login</button>
+          <button  type="submit">Login</button>
         </form>
       </div>
     </div>
