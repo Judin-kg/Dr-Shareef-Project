@@ -104,6 +104,7 @@ import Contact from "./pages/Contact";
 import AdminLogin from "./admin/AdminLogin";
 import Dashboard from "./admin/Dashboard";
 import Navabar from "./components/Navabar";
+import Mentorship from "./pages/Mentorship";
 
 function App() {
   const [isAdmin, setIsAdmin] = useState(false);
@@ -134,6 +135,10 @@ function App() {
 
         <section id="gallery">
           <Gallery />
+        </section>
+
+        <section id="gallery">
+          <Mentorship />
         </section>
 
         <section id="blogs">

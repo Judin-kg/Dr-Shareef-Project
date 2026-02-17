@@ -134,7 +134,7 @@
 import React, { useEffect, useRef } from "react";
 import "../pages/Home.css";
 import video from "../assets/drshareef.mp4";
-
+import image from "../assets/Comp 1.mp4"
 export default function Home() {
   const videoRef = useRef(null);
 
@@ -174,6 +174,7 @@ export default function Home() {
           <div className="home-image futuristic-glow">
             <img
               src="https://marketlube-website-assets.s3.ap-south-1.amazonaws.com/DrShareef/drShareef_mwbm2x.png"
+              // src={image}
               alt="Dr A M Shareef"
             />
           </div>

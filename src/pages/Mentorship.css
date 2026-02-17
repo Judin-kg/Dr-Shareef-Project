@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+/* ===============================
+   SECTION BASE
+================================ */
+
+.mentorship-section {
+  position: relative;
+  min-height: 120vh;
+  background: url("../assets/img2.webp") center/cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+  padding: 100px 8%;
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.mentorship-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+/* ===============================
+   WRAPPER
+================================ */
+
+.mentorship-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 60px;
+  width: 100%;
+  align-items: center;
+}
+
+/* ===============================
+   LEFT CONTENT
+================================ */
+
+.mentorship-content {
+  flex: 1;
+  font-family: "Poppins", sans-serif;
+  color: #8b8989;
+}
+
+.mentorship-title {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #5a090e;
+}
+.side-title{
+    color: rgb(79, 80, 80);
+}
+/* Content blocks */
+.mentorship-block {
+  margin-bottom: 35px;
+}
+
+.mentorship-block h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #888686;
+}
+
+.mentorship-block p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #cccccc;
+}
+
+/* ===============================
+   RIGHT IMAGE
+================================ */
+
+.mentorship-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.mentorship-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+  transition: transform 0.6s ease;
+}
+
+.mentorship-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ===============================
+   SCROLL REVEAL ANIMATION
+================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===============================
+   TABLET
+================================ */
+
+@media (max-width: 1024px) {
+  .mentorship-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .mentorship-title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .mentorship-content {
+    text-align: center;
+  }
+
+  .mentorship-image img {
+    max-width: 400px;
+  }
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  .mentorship-section {
+    padding: 80px 20px;
+  }
+
+  .mentorship-title {
+    font-size: 2rem;
+  }
+
+  .mentorship-block h3 {
+    font-size: 1.2rem;
+  }
+
+  .mentorship-block p {
+    font-size: 0.95rem;
+  }
+
+  .mentorship-image img {
+    max-width: 100%;
+    border-radius: 14px;
+  }
+}

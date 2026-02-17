@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ManageBlogs.css";
 
 export default function ManageBlogs() {
@@ -7,6 +7,19 @@ export default function ManageBlogs() {
   const [content, setContent] = useState("");
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  // ✅ Cloudinary config
+  const cloudName = "djuihd2af";
+  const uploadPreset = "rjatlas";
+
+  // ✅ Fetch blogs
+  useEffect(() => {
+    fetch("http://localhost:5000/api/blogs")
+      .then((res) => res.json())
+      .then((data) => setBlogs(data))
+      .catch((err) => console.log(err));
+  }, []);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -17,7 +30,7 @@ export default function ManageBlogs() {
     }
   };
 
-  const addBlog = (e) => {
+  const addBlog = async (e) => {
     e.preventDefault();
 
     if (!title || !content || !image) {
@@ -25,24 +38,60 @@ export default function ManageBlogs() {
       return;
     }
 
-    const newBlog = {
-      title,
-      content,
-      image: preview,
-      date: new Date().toLocaleDateString(),
-    };
+    setLoading(true);
 
-    setBlogs([newBlog, ...blogs]);
+    try {
+      // ✅ Upload to Cloudinary
+      const data = new FormData();
+      data.append("file", image);
+      data.append("upload_preset", uploadPreset);
 
-    // Reset
-    setTitle("");
-    setContent("");
-    setImage(null);
-    setPreview(null);
+      const res = await fetch(
+        `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
+        {
+          method: "POST",
+          body: data,
+        }
+      );
+
+      const result = await res.json();
+
+      // ✅ Save blog in backend
+      const blogRes = await fetch("http://localhost:5000/api/blogs", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title,
+          content,
+          image: result.secure_url,
+        }),
+      });
+
+      const newBlog = await blogRes.json();
+
+      setBlogs([newBlog, ...blogs]);
+
+      // Reset
+      setTitle("");
+      setContent("");
+      setImage(null);
+      setPreview(null);
+    } catch (error) {
+      console.log(error);
+      alert("Something went wrong");
+    }
+
+    setLoading(false);
   };
 
-  const deleteBlog = (index) => {
-    setBlogs(blogs.filter((_, i) => i !== index));
+  const deleteBlog = async (id) => {
+    await fetch(`http://localhost:5000/api/blogs/${id}`, {
+      method: "DELETE",
+    });
+
+    setBlogs(blogs.filter((blog) => blog._id !== id));
   };
 
   return (
@@ -50,7 +99,6 @@ export default function ManageBlogs() {
       <h1>Manage Blogs</h1>
       <p>Create and manage blog posts displayed on the website.</p>
 
-      {/* Create Blog */}
       <form className="blog-form" onSubmit={addBlog}>
         <input
           type="text"
@@ -74,19 +122,24 @@ export default function ManageBlogs() {
           </div>
         )}
 
-        <button type="submit">Add Blog</button>
+        <button type="submit" disabled={loading}>
+          {loading ? "Adding..." : "Add Blog"}
+        </button>
       </form>
 
-      {/* Blog List */}
       <div className="blog-list">
-        {blogs.map((blog, index) => (
-          <div key={index} className="blog-card">
+        {blogs.map((blog) => (
+          <div key={blog._id} className="blog-card">
             <img src={blog.image} alt={blog.title} />
             <div className="blog-info">
               <h3>{blog.title}</h3>
-              <span>{blog.date}</span>
+              <span>
+                {new Date(blog.createdAt).toLocaleDateString()}
+              </span>
               <p>{blog.content}</p>
-              <button onClick={() => deleteBlog(index)}>Delete</button>
+              <button onClick={() => deleteBlog(blog._id)}>
+                Delete
+              </button>
             </div>
           </div>
         ))}

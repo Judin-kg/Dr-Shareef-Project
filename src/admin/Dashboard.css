@@ -82,3 +82,21 @@
 .stat-card p {
   color: #bbb;
 }
+
+
+.admin-sidebar ul li {
+  cursor: pointer;
+  padding: 12px;
+  transition: 0.2s;
+}
+
+.admin-sidebar ul li:hover {
+  background: #0ea5e9;
+  color: white;
+}
+
+.admin-sidebar ul li.logout {
+  color: #ef4444;
+  margin-top: 20px;
+  font-weight: bold;
+}
