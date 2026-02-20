@@ -10,7 +10,7 @@ export default function AdminLogin({ onLogin }) {
     e.preventDefault();
 
     // TEMP login logic (replace with backend later)
-    if (email === "admin@shareef.com" && password === "admin123") {
+    if (email === "doctorshareef@hotmail.com" && password === "shareef@999") {
       setError("");
       onLogin(true);
     } else {
