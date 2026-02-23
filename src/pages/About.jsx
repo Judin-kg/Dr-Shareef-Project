@@ -413,10 +413,12 @@ export default function About() {
           </div>
 
           <div className="about-block fade-in delay-2">
-            <h3>Chief Dental Surgeon – TANZA Dental</h3>
+            <h3>Senior Dental Surgeon</h3>
             <p>
-              Under his leadership, TANZA Dental is known for advanced treatments,
-              state-of-the-art technology, and personalized patient care.
+              Our Senior Dental Surgeon brings years of clinical experience and advanced
+    expertise in diagnosing and treating a wide range of dental conditions.
+    With a strong commitment to patient comfort and precision care, they
+    specialize in restorative, cosmetic, and surgical dental procedures.
             </p>
           </div>
         </div>
