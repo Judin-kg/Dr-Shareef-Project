@@ -69,7 +69,7 @@ export default function Mentorship() {
             ref={(el) => (contentRefs.current[3] = el)}
             className="mentorship-block reveal"
           >
-            <h3>Supporting Entrepreneurs through BNI</h3>
+            <h3>Supporting Entrepreneurs</h3>
             <p>
               Through BNI, Dr. Shareef mentors entrepreneurs, helping them
               expand their networks, build sustainable businesses, and

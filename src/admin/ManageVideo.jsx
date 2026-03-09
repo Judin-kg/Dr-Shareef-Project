@@ -65,7 +65,7 @@ export default function ManageVideo() {
 
   // ✅ Fetch videos from backend
   useEffect(() => {
-    fetch("http://localhost:5000/api/videos")
+    fetch("https://dr-shareef-server.vercel.app/api/videos")
       .then((res) => res.json())
       .then((data) => setVideos(data))
       .catch((err) => console.log(err));
@@ -106,7 +106,7 @@ export default function ManageVideo() {
 
       // ✅ Save to backend
       const backendRes = await fetch(
-        "http://localhost:5000/api/videos",
+        "https://dr-shareef-server.vercel.app/api/videos",
         {
           method: "POST",
           headers: {
@@ -143,7 +143,7 @@ export default function ManageVideo() {
 
   const handleDelete = async (id) => {
     await fetch(
-      `http://localhost:5000/api/videos/${id}`,
+      `https://dr-shareef-server.vercel.app/api/videos/${id}`,
       {
         method: "DELETE",
       }
@@ -201,4 +201,5 @@ export default function ManageVideo() {
     </div>
   );
 }
+
 

@@ -413,12 +413,9 @@ export default function About() {
           </div>
 
           <div className="about-block fade-in delay-2">
-            <h3>Senior Dental Surgeon</h3>
+            <h3>Entrepreneurial Mentorship: Aims and Goals</h3>
             <p>
-              Our Senior Dental Surgeon brings years of clinical experience and advanced
-    expertise in diagnosing and treating a wide range of dental conditions.
-    With a strong commitment to patient comfort and precision care, they
-    specialize in restorative, cosmetic, and surgical dental procedures.
+             Through my life experience, I have observed that India is home to tremendously talented business entrepreneurs; however, many of them lack proper guidance and structured mentorship. I am committed to addressing this gap by dedicating myself to mentoring aspiring entrepreneurs, equipping them with clarity, strategy, and professional competencies, and empowering them to build, manage, and scale their businesses with confidence, structure, and long-term sustainability.
             </p>
           </div>
         </div>

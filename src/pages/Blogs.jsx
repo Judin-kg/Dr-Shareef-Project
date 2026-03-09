@@ -69,10 +69,10 @@ export default function Blogs() {
   =============================== */
   const dummyBlogs = [
     {
-      title: "Importance of Oral Health",
+      title: "Importance of Bussiness Development",
       image: blog,
       content:
-        "Advanced dental care improves patient outcomes and comfort using modern technology."
+        "Mentorship Vision: Developing Future Business Leaders , Aiming to Build Strong and Confident Entrepreneurs"
     },
     {
       title: "Leadership Through Dentistry",

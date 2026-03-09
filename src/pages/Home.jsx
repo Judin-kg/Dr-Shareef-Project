@@ -292,7 +292,7 @@ export default function Home() {
 
   // ✅ Fetch API videos
   useEffect(() => {
-    fetch("http://localhost:5000/api/videos")
+    fetch("https://dr-shareef-server.vercel.app/api/videos")
       .then((res) => res.json())
       .then((data) => setVideos(data))
       .catch((err) => console.log(err));
